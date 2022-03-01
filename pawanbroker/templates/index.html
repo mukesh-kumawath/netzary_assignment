@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v9 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/nunito-font.css'%}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'css/style.css '%}"/>
+</head>
+<body class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" >
+			<form class="form-detail" action="display_intrest" method="post">
+				{% csrf_token %}
+				<h2>Sudarshan Gupta's Pawn Broker</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+						<label>LOAN DATE</label>
+						<input type="date" name="Loan_date"  class="input-date" placeholder="LOAN DATE" required>
+					</div>
+					<div class="form-row">
+						<label>RELESE DATE</label>
+						<input type="date" name="pledge_date" class="input-date" placeholder="PLEDGE DATE" required ">
+					</div>
+				</div>
+				<br>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="number" name="amount" id="principle amount" class="input-number" placeholder="PRICIPLE AMOUNT" min ="1" required>
+					</div>
+					<div class="form-row">
+						<input type="number" name="intrest" id="intrest" class="input-number" placeholder="INTREST" min="1" max="100" >
+					</div>
+				</div>
+				<br>
+				<div class="form-row-last">
+					<input type="submit" value="calculate">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
